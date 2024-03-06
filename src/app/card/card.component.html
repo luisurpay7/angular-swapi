@@ -1,8 +1,8 @@
-<div class="film-card">
+<div class="film-card" (click)="openModal()">
   <div class="image">
     <img src="../../assets/star-wars-episode-iv-a-new-hope-3.jpg" alt="">
   </div>
-  <h3>{{film.title}}</h3>
+  <span class="title">{{film.title}}</span>
   <p>Director: {{film.director}}</p>
   <p>Episodio: {{film.episode_id}}</p>
 </div>

@@ -1,6 +1,6 @@
 .film-card {
   width: 250px;
-  height: 445px;
+  height: 460px;
   margin: 10px 20px;
   border: 1px solid #cfcaca;
   border-radius: 3px;
@@ -14,10 +14,18 @@
   width: 100%;
 }
 
-.film-card h3 {
-  margin: 4px 0px;
+.title {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 2px 0px;
 }
 
 .film-card p {
-  margin: 2px 0px;
+  margin: 1px 0px;
+}
+
+.film-card:hover {
+  border: 1px solid #646464;
+  box-shadow: 1px 1px 5px #666666;
 }

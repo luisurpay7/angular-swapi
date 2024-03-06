@@ -1,4 +1,4 @@
-.container {
+footer {
   background-color: #2A4281;
   height: 80px;
   display: flex;
@@ -6,6 +6,6 @@
   align-items: center;
 }
 
-.container p {
+footer p {
   color: #fff;
 }

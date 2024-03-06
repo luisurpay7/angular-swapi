@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { SwapiService } from '../swapi.service';
-import { Films } from '../interfaces/film.interface';
+import { Film, Films } from '../interfaces/film.interface';
 
 @Component({
   selector: 'app-home',
@@ -10,6 +10,7 @@ import { Films } from '../interfaces/film.interface';
 export class HomeComponent {
 
   films: Films = {} as Films;
+  dataFilm: Film = {} as Film;
 
   constructor(private swapiService: SwapiService){}
 
@@ -18,4 +19,20 @@ export class HomeComponent {
       this.films = response;
     });
   }
+
+  showModal(id: number){
+    this.dataFilm = this.films.results[id];
+    const element = document.getElementById("filmModal");
+    if(element){
+      element.style.display = 'block';
+    }
+  }
+
+  closeModal() {
+    const element = document.getElementById("filmModal");
+    if(element){
+      element.style.display = 'none';
+    }
+  }
+
 }

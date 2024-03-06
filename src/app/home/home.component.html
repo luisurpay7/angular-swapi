@@ -1,3 +1,37 @@
 <div class="film-list">
-  <app-card *ngFor="let film of films.results" [film]="film"></app-card>
+  <app-card *ngFor="let film of films.results; index as i" [film]="film" [numero]="i" (showModal)="showModal($event)"></app-card>
+</div>
+
+<!-- The Modal -->
+<div class="modal" id="filmModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Detalle Film</h4>
+        <button type="button" class="btn-close" (click)="closeModal()" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        {{dataFilm.title}}
+        {{dataFilm.characters}}
+
+          <!--
+        <div class="sprites" *ngIf="dataPokemon.sprites">
+          <img src="{{dataPokemon.sprites.front_default}}" alt="">
+          <img src="{{dataPokemon.sprites.back_default}}" alt="">
+          <img src="{{dataPokemon.sprites.front_shiny}}" alt="">
+          <img src="{{dataPokemon.sprites.back_shiny}}" alt="">
+        </div> -->
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" (click)="closeModal()" data-bs-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
 </div>

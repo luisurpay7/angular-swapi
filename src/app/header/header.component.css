@@ -1,4 +1,4 @@
-.container {
+header {
   background-color: #2A4281;
   height: 140px;
   display: flex;
@@ -6,6 +6,6 @@
   align-items: center;
 }
 
-.container img {
+header img {
   height: 140px;
 }

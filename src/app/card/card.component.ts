@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Film } from '../interfaces/film.interface';
 
 @Component({
@@ -9,8 +9,15 @@ import { Film } from '../interfaces/film.interface';
 export class CardComponent {
 
   @Input() film: Film = {} as Film;
+  @Input() numero: number = 0;
+  @Output() showModal: EventEmitter<number> = new EventEmitter<number>;
 
   ngOnInit(){
     console.log(this.film);
   }
+
+  openModal(){
+    this.showModal.emit(this.numero);
+  }
+
 }
