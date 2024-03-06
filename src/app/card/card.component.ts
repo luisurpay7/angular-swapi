@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Film } from '../interfaces/film.interface';
 
 @Component({
   selector: 'app-card',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class CardComponent {
 
+  @Input() film: Film = {} as Film;
+
+  ngOnInit(){
+    console.log(this.film);
+  }
 }
