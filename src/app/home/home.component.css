@@ -1,0 +1,10 @@
+:host {
+  display: block;
+  min-height: 75vh;
+}
+
+.container {
+  background-color: red;
+  width: 85%;
+  margin: 30px auto;
+}
