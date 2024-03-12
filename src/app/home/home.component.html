@@ -9,22 +9,16 @@
 
       <!-- Modal Header -->
       <div class="modal-header">
-        <h4 class="modal-title">Detalle Film</h4>
+        <h4 class="modal-title">Detalle Película</h4>
         <button type="button" class="btn-close" (click)="closeModal()" data-bs-dismiss="modal"></button>
       </div>
 
       <!-- Modal body -->
       <div class="modal-body">
-        {{dataFilm.title}}
-        {{dataFilm.characters}}
-
-          <!--
-        <div class="sprites" *ngIf="dataPokemon.sprites">
-          <img src="{{dataPokemon.sprites.front_default}}" alt="">
-          <img src="{{dataPokemon.sprites.back_default}}" alt="">
-          <img src="{{dataPokemon.sprites.front_shiny}}" alt="">
-          <img src="{{dataPokemon.sprites.back_shiny}}" alt="">
-        </div> -->
+        <span>Título:</span>
+        <p>{{dataFilm.title}}</p>
+        <span>Personajes:</span>
+        <p *ngFor="let charac of characters; index as i">{{i+1}}. {{charac.name}}</p>
       </div>
 
       <!-- Modal footer -->

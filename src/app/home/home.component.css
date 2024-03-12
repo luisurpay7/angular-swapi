@@ -11,3 +11,11 @@
   justify-items: center;
   gap: 15px
 }
+
+#filmModal span {
+  font-weight: bold;
+}
+
+#filmModal p {
+  margin: 0;
+}
