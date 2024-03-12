@@ -13,7 +13,6 @@ export class CardComponent {
   @Output() showModal: EventEmitter<number> = new EventEmitter<number>;
 
   ngOnInit(){
-    console.log(this.film);
   }
 
   openModal(){
