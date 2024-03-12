@@ -23,14 +23,6 @@ export class HomeComponent {
       response.results.sort((a,b) => a.episode_id - b.episode_id);
       this.films = response;
     });
-
-    // let nextUrl = `${environment.swapiUrl}/people`;
-    // do{
-    //   this.people = await this.swapiService.getGroupCharacters(nextUrl).toPromise() || {} as Characters;
-    //   this.characters = this.characters.concat(this.people.results);
-    //   nextUrl = this.people.next;
-    // }while(this.people.next);
-    // console.log(this.characters)
   }
 
   showModal(id: number){
